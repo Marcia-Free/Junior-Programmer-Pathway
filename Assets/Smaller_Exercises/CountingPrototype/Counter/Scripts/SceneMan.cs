@@ -1,8 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SceneManager : MonoBehaviour
+public class SceneMan : MonoBehaviour
 {
     public GameObject prefabToSpawn;
     public float numToSpawn;
@@ -16,7 +17,7 @@ public class SceneManager : MonoBehaviour
     {
 
         while(numToSpawn > 0) {
-            Instantiate(prefabToSpawn, new Vector3(Random.Range(minRange, maxRange), (Random.Range(minRange, maxRange) + 15), Random.Range(minRange, maxRange)), Quaternion.identity);
+            Instantiate(prefabToSpawn, new Vector3(UnityEngine.Random.Range(minRange, maxRange), (UnityEngine.Random.Range(minRange, maxRange) + 15), UnityEngine.Random.Range(minRange, maxRange)), Quaternion.identity);
             numToSpawn--;
         }
 
